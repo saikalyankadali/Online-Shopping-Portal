@@ -1,0 +1,380 @@
+<html>
+<head>
+<title>page1</title>
+<link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+.header{
+	position : fixed;
+	top : 0px;
+	background-color : #E8E8E8;
+	height : 120px;
+	width : 100%;
+	text-align : 15px;
+	z-index:1;
+}
+#myInput{
+	height : 35px;
+	width : 600px;
+	border : 1px solid red;
+	border-radius : 5px;
+	float : center;
+	margin-top : 20px;
+	margin-left : 40px;
+}
+.title{
+	float : left ;
+}
+#containerss{
+		margin-top:70px;
+
+		}
+         #containerss ul
+         {
+                list-style:none;
+
+          }
+         #containerss ul li
+         {
+               background:transparent;
+               width:120px;
+               border:0px solid white;
+               height:40px;
+               line-height:40px;
+               text-align:center;
+               float:left;
+               color:white;
+               font-size:13px;
+               position:relative;   
+		
+           }
+          #containerss a
+          {
+                text-decoration:none;
+                color:white;
+           }
+          #containerss ul li:hover
+           {
+                border-bottom:5px solid red; 
+				background-color:black;
+           }
+           #containerss ul ul
+          {
+                   display:none;
+				   margin-left:-40px;
+           }
+           #containerss ul li:hover > ul
+           {
+                    display:block;
+            }
+           #containerss ul ul ul
+           {
+                     margin-left:180px;
+                     top:0px;
+                     position:absolute;
+            }
+		.main{
+			z-index:-1;
+			margin-top:100px;
+		}
+			
+			
+			
+			* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+</style>
+
+
+</head>
+<body>
+	<div class="container" style="position:fixed; top:5px;left:200px;z-index:2">
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+
+</div>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myDIV *").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+	
+<div class="header">
+	<div class="title" style="margin-top: 20px;margin-left: 20px;"><font face="Viner Hand ITC" size="5px" color="orange">Fun</font><font face="Russo One" color="blue" size="5px">Cart</font><font face="Russo One" color="black" size="15px">.com</font></div>
+	
+
+	<div id="containerss" onmouseover="zf()" onmouseout="yf()">
+		<ul>
+			<li><a href="" target="a">Your FunCart.in</a></li>
+			<li><a href="#">Products</a>
+				<ul>
+					<li><a href="#">Books</a></li> 
+					<li><a href="#">Clothing</a></li>
+					<li><a href="#">Home & Kitchen</a></li> 
+					<li><a href="#">Electronics</a></li> 
+					<li><a href="#">Shoes</a></li> 
+				</ul>
+			</li>
+			<li><a href="#">Today's Deals</a> </li>
+			<li><a href="#">About Us</a></li>
+			<li><a href="#">Hello Sign in </a>
+				<ul>
+					<li><a href="login.html">Sign In</a></li>
+					<li><a href="register.html">Sign Up</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Cart</a></li>
+		</ul>
+	</div>
+</div>
+
+
+
+<div class="main">
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="images\slide1.jpg" style="width:100%;height:60%;">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="images\slide2.jpg" style="width:100%;height:60%;">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images\slide3.jpg" style="width:100%;height:60%;">
+  <div class="text">Caption Three</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+
+
+
+	<div class="image">
+		<div><img src="images\image1.jpg" align="center" height=150 width=100></div>
+		<div><p onmouseover="this.style.color='blue'" onmouseout="this.style.color='black'" style="font-size:20;">Redmi Note 5 Pro 4.5 out of 5 </p>
+			<p style="font-size:14;">M.R.P: <strike>Rs 15,961.00</strike></p>
+			<p style="font-size:14;">Price: <font color="red"> Rs 13,872.00</font><br><font color="blue"> FREE DELIVARY</font>
+			<font color="blue">FREE Returns</font></p>
+			<p style="font-size:14;">You Save: <font color="red">Rs 2,089.00</font></p>
+			<p>Inclusive of all taxes</p></div>
+			<a href="#">ADD TO CART</a>
+		</div>
+	</div>
+	
+	<div class="image">
+		<div><img src="images\image2.jpg" align="center" height=150 width=100></div>
+		<div><p onmouseover="this.style.color='blue'" onmouseout="this.style.color='black'" style="font-size:20;">Philips Beard Trimmer Cordless for Men QT4001/15 (With Adapter) </p>
+			<p style="font-size:14;">M.R.P: <strike>Rs 1,360.00</strike></p>
+			<p style="font-size:14;">Price: <font color="red"> Rs 1,179.00</font><br><font color="blue"> FREE DELIVARY</font>
+			<font color="blue">FREE Returns</font></p>
+			<p style="font-size:14;">You Save: <font color="red">Rs 181.00</font></p>
+			<p>Inclusive of all taxes</p></div>
+			<a href="#">ADD TO CART</a>
+		</div>
+	</div>
+	
+	<div class="image">
+		<div><img src="images\image4.jpg" align="center" height=150 width=100></div>
+		<div><p onmouseover="this.style.color='blue'" onmouseout="this.style.color='black'" style="font-size:20;">Lenovo Thinkpad T440 14-inch Laptop , Black </p>
+			<p style="font-size:14;">M.R.P: <strike>Rs 90,000.00</strike></p>
+			<p style="font-size:14;">Price: <font color="red"> Rs 24,999.00</font><br><font color="blue"> FREE DELIVARY</font>
+			<font color="blue">FREE Returns</font></p>
+			<p style="font-size:14;">You Save: <font color="red">Rs 65,001.00 (72%)</font></p>
+			<p>Inclusive of all taxes</p></div>
+			<a href="#">ADD TO CART</a>
+		</div>
+	</div>
+	<div class="image">
+		<div><img src="images\image3.jpg" align="center" height=150 width=100></div>
+		<div><p onmouseover="this.style.color='blue'" onmouseout="this.style.color='black'" style="font-size:20;">KENT Grand 8-Litres Wall-Mountable RO + UV/UF + TDS Water Purifier </p>
+			<p style="font-size:14;">M.R.P: <strike>Rs 18,500.00 </strike></p>
+			<p style="font-size:14;">Price: <font color="red"> Rs 13,999.00</font><br><font color="blue"> FREE DELIVARY</font>
+			<font color="blue">FREE Returns</font></p>
+			<p style="font-size:14;">You Save: <font color="red">Rs 4,501.00 (24%)</font></p>
+			<p>Inclusive of all taxes</p></div>
+			<a href="#">ADD TO CART</a>
+		</div>
+	</div>
+	<div class="image">
+		<div><img src="images\image5.jpg" align="center" height=150 width=100></div>
+		<div><p onmouseover="this.style.color='blue'" onmouseout="this.style.color='black'" style="font-size:20;">How to Win Friends and Influence People </p>
+			<p style="font-size:14;">M.R.P: <strike>Rs 200</strike></p>
+			<p style="font-size:14;">Price: <font color="red"> Rs 150.00</font><br><font color="blue"> FREE DELIVARY</font>
+			<font color="blue">FREE Returns</font></p>
+			<p style="font-size:14;">You Save: <font color="red">Rs 50.00</font></p>
+			<p>Inclusive of all taxes</p></div>
+			<a href="#">ADD TO CART</a>
+		</div>
+	</div>
+	<div class="image">
+		<div><img src="images\image6.jpg" align="center" height=150 width=100></div>
+		<div><p onmouseover="this.style.color='blue'" onmouseout="this.style.color='black'" style="font-size:20;">WEXFORD Men's Cotton Polo (Wex-Wfe010H) </p>
+			<p style="font-size:14;">M.R.P: <strike>Rs 999.00 </strike></p>
+			<p style="font-size:14;">Price: <font color="red"> Rs 419.00</font><br><font color="blue"> FREE DELIVARY</font>
+			<font color="blue">FREE Returns</font></p>
+			<p style="font-size:14;">You Save: <font color="red">72%</font></p>
+			<p>Inclusive of all taxes</p></div>
+			<a href="#">ADD TO CART</a>
+		</div>
+	</div>
+	<div class="image">
+		<div><img src="images\image7.jpg" align="center" height=150 width=100></div>
+		<div><p onmouseover="this.style.color='blue'" onmouseout="this.style.color='black'" style="font-size:20;">Fastrack Economy 2013 Analog White Dial Men's Watch -NK3099SL01</p>
+			<p style="font-size:14;">M.R.P: <strike>Rs 2500.00</strike></p>
+			<p style="font-size:14;">Price: <font color="red"> Rs 2000.00</font><br><font color="blue"> FREE DELIVARY</font>
+			<font color="blue">FREE Returns</font></p>
+			<p style="font-size:14;">You Save: <font color="red">Rs 500.00</font></p>
+			<p>Inclusive of all taxes</p></div>
+			<a href="#">ADD TO CART</a>
+		</div>
+	</div>
+	<div class="image">
+		<div><img src="images\image8.jpg" align="center" height=150 width=100></div>
+		<div><p onmouseover="this.style.color='blue'" onmouseout="this.style.color='black'" style="font-size:20;">55 cm Hardshell Cabin Size Suitcase, Slate Grey </p>
+			<p style="font-size:14;">M.R.P: <strike>Rs 9,000.00</strike></p>
+			<p style="font-size:14;">Price: <font color="red"> Rs 3200.00</font><br><font color="blue"> FREE DELIVARY</font>
+			<font color="blue">FREE Returns</font></p>
+			<p style="font-size:14;">You Save: <font color="red">Rs 5800</font></p>
+			<p>Inclusive of all taxes</p></div>
+			<a href="#">ADD TO CART</a>
+		</div>
+	</div>
+	<div class="image">
+		<div><img src="images\image9.jpg" align="center" height=150 width=100></div>
+		<div><p onmouseover="this.style.color='blue'" onmouseout="this.style.color='black'" style="font-size:20;">20 Ltrs Peacoat Laptop Backpack</p>
+			<p style="font-size:14;">M.R.P: <strike>Rs  1,999.00</strike></p>
+			<p style="font-size:14;">Price: <font color="red"> Rs 567.00</font><br><font color="blue"> FREE DELIVARY</font>
+			<font color="blue">FREE Returns</font></p>
+			<p style="font-size:14;">You Save: <font color="red">Rs 1,432.00 (72%)</font></p>
+			<p>Inclusive of all taxes</p></div>
+			<a href="#">ADD TO CART</a>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

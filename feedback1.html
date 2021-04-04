@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>feedback</title>
+<style>
+
+td
+{
+color:skyblue;
+font-size:20px;
+}
+
+.feedback textarea[type="text"]
+{
+                  border:none;
+                  border-bottom:1px solid skyblue;
+                  background:transparent;
+                  outline:none;
+                  height:40px;
+                  font-size:30px;
+	border-radius:10px;
+	padding:100px 60px;
+}
+.feedback input[type="submit"]
+{background-color:red;height:40px;width:120px;border-radius:5px;font-size:20px;color:white;}
+.feedback input[type="submit"]:hover
+{background-color:black;}
+body{background-size:cover;}
+</style>
+</head>
+<body>
+<div class="feedback">
+<table cellspacing=20>
+ <form name="feedback"  action="feedback1insert.php" method="post">
+  
+<tr>
+<td></td>
+<td><textarea type="text" name="feedback" rows="8" cols="30" placeholder="Give the FEEDBACK"></textarea></td>
+</tr>
+<tr>
+ <td><input type="submit" value="submit"  align="center" name="submit"></td>
+</tr>
+</form>
+</table>
+</div>
+</body>
+</html>
