@@ -10,3 +10,5 @@ if($conn->query($sql)==true)
 else
 echo "not deleted";
 ?>
+
+//new commend line added
